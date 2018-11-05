@@ -1,5 +1,5 @@
-#include <restclient-cpp/restclient.h>
 #include <iostream>
+#include <restclient-cpp/restclient.h>
 #include <nlohmann/json.hpp>
 
 using namespace std;
@@ -28,11 +28,9 @@ class MkApi {
     }
 };
 
-
 int main(){
     string analises = "{\"query\": \"{analises{data{id datahora iq gordura proteina nu fccs lactose temperatura estabilidade desc_amostra local{nome} usuario{nome} }}}\"}";
     MkApi api("http://localhost:3000/graphql");
     auto response = api.request(analises);
     cout << response["data"]["analises"]["data"].dump(4) << endl;
-
 }
