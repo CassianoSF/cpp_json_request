@@ -1,5 +1,7 @@
+ // g++ request.cpp -o request -L /usr/local/lib/ -lrestclient-cpp -I/home/linuxbrew/.linuxbrew/opt/nlohmann_json/include
+
 #include <iostream>
-#include <restclient-cpp/restclient.h>
+#include <restclient-cpp/restclient. h>
 #include <nlohmann/json.hpp>
 
 using namespace std;
